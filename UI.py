@@ -4,8 +4,8 @@ UI.geometry("800x480")
 UI.attributes("-fullscreen", True)   # fullscreen
 UI.overrideredirect(True)
 UI._set_appearance_mode("dark")
-btnW = 300
-btnH = 150
+btnW = 120
+btnH = 100
 # START Define main menu btns
 IR_btn = CTkButton(master=UI,  text="IR",fg_color="#000000",
 hover_color="#090404",text_color="#ff2775",
