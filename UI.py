@@ -8,6 +8,8 @@ UI._set_appearance_mode("dark")
 btnW = 188
 btnH = 100
 
+menuHeader = CTkLabel(master=UI, text="CYBERDECK", text_color="#ff00ff",font=("aerial",100))
+menuHeader.place(relx=0.5,rely=0.125,anchor="center")
 # START btn funcs
 def goodbye():
     print("Bye")
