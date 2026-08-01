@@ -1,29 +1,29 @@
 from customtkinter import *
 UI = CTk()
 UI.geometry("800x480")
-UI.attributes("-fullscreen", True)   # fullscreen
-UI.overrideredirect(True)
+#UI.attributes("-fullscreen", True)   # fullscreen
+#UI.overrideredirect(True)
 UI._set_appearance_mode("dark")
 btnW = 188
 btnH = 100
 # START Define main menu btns
-IR_btn = CTkButton(master=UI,  text="IR",fg_color="#000000",
-hover_color="#ffffff",text_color="#ff2775",
-font=("aerial",25), width=btnW, height=btnH,
-border_color="#ffffff", border_width=7)
-
-NFC_btn = CTkButton(master=UI,  text="NFC",fg_color="#000000",
-hover_color="#ffffff",text_color="#5200ff",
+IR_btn = CTkButton(master=UI,  text="IR",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#ff2775",
 font=("aerial",25), width=btnW, height=btnH,
 border_color="#008cff", border_width=7)
 
-RFID_btn = CTkButton(master=UI,  text="RFID",fg_color="#000000",
-hover_color="#ffffff",text_color="#27ff84",
+NFC_btn = CTkButton(master=UI,  text="NFC",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#5200ff",
 font=("aerial",25), width=btnW, height=btnH,
 border_color="#008cff", border_width=7)
 
-SDR_btn = CTkButton(master=UI,  text="SDR",fg_color="#000000",
-hover_color="#ffffff",text_color="#ffffff",
+RFID_btn = CTkButton(master=UI,  text="RFID",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#27ff84",
+font=("aerial",25), width=btnW, height=btnH,
+border_color="#008cff", border_width=7)
+
+SDR_btn = CTkButton(master=UI,  text="SDR",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#ffffff",
 font=("aerial",25), width=btnW, height=btnH,
 border_color="#008cff", border_width=7)
 # END Define main menu btns
