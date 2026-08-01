@@ -1,8 +1,9 @@
 from customtkinter import *
 UI = CTk()
-UI.geometry("800x400")
+UI.geometry("800x480")
 UI.attributes("-fullscreen", True)   # fullscreen
 UI.overrideredirect(True)
+UI._set_appearance_mode("dark")
 # START Define main menu btns
 IR_btn = CTkButton(master=UI,  text="IR",fg_color="#000000",
 hover_color="#090404",text_color="#ff2775",
