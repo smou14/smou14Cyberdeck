@@ -34,17 +34,17 @@ border_color="#008cff", border_width=7,command=infrared)
 NFC_btn = CTkButton(master=UI,  text="NFC",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#5200ff",
 font=("aerial",25), width=btnW, height=btnH,
-border_color="#008cff", border_width=7)
+border_color="#008cff", border_width=7,command=nfc)
 
 RFID_btn = CTkButton(master=UI,  text="RFID",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#27ff84",
 font=("aerial",25), width=btnW, height=btnH,
-border_color="#008cff", border_width=7)
+border_color="#008cff", border_width=7,command=rfid)
 
 SDR_btn = CTkButton(master=UI,  text="SDR",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ffffff",
 font=("aerial",25), width=btnW, height=btnH,
-border_color="#008cff", border_width=7)
+border_color="#008cff", border_width=7,command=sdr)
 
 EXIT_btn = CTkButton(master=UI,  text="X",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ff0000",
