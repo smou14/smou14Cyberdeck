@@ -2,14 +2,14 @@ from customtkinter import *
 import sys
 UI = CTk()
 UI.geometry("800x480")
-UI.attributes("-fullscreen", True)   # fullscreen
-UI.overrideredirect(True)
+#UI.attributes("-fullscreen", True)   # fullscreen
+#UI.overrideredirect(True)
 UI._set_appearance_mode("dark")
 btnW = 188
 btnH = 100
 
 menuHeader = CTkLabel(master=UI, text="CYBERDECK", text_color="#ff00ff",
-bg_color="transparent",fg_color="transparent",font=("aerial",100))
+fg_color="transparent",font=("aerial",100))
 menuHeader.place(relx=0.5,rely=0.125,anchor="center")
 
 # START btn funcs
