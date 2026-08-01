@@ -3,8 +3,8 @@ import sys
 set_appearance_mode("dark")
 UI = CTk()
 UI.geometry("800x480")
-#UI.attributes("-fullscreen", True)   # fullscreen
-#UI.overrideredirect(True)
+UI.attributes("-fullscreen", True)   # fullscreen
+UI.overrideredirect(True)
 
 btnW = 188
 btnH = 100
