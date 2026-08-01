@@ -15,12 +15,21 @@ def goodbye():
     UI.destroy()
     sys.exit()
 
+def infrared():
+    print("IR")
+def nfc():
+    print("NFC")
+def rfid():
+    print("RFID")
+def sdr():
+    print("SDR")
 
+#END btn funcs
 # START Define main menu btns
 IR_btn = CTkButton(master=UI,  text="IR",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ff2775",
 font=("aerial",25), width=btnW, height=btnH,
-border_color="#008cff", border_width=7)
+border_color="#008cff", border_width=7,command=infrared)
 
 NFC_btn = CTkButton(master=UI,  text="NFC",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#5200ff",
