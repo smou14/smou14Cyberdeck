@@ -7,6 +7,17 @@ UI.attributes("-fullscreen", True)   # fullscreen
 UI.overrideredirect(True)
 current_frame = None
 
+def infrared():
+    print("IR")
+def nfc():
+    print("NFC")
+def rfid():
+    print("RFID")
+def sdr():
+    print("SDR")
+
+
+
 def show_frame(frame):
     global current_frame
 
@@ -40,6 +51,23 @@ hover_color="#000000",text_color="#ff0000",
 font=("aerial",25), width=50, height=50,
 border_color="#008cff", border_width=7,command=lambda: show_frame(mainMenu))
 
+IR_btn_TX = CTkButton(master=IRMenu,  text="TX",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#ff2775",
+font=("aerial",25), width=200, height=200,
+border_color="#ff2775", border_width=7,command=infrared)
+
+IR_btn_RX = CTkButton(master=IRMenu,  text="RX",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#ff2775",
+font=("aerial",25), width=200, height=200,
+border_color="#ff2775", border_width=7,command=infrared)
+
+
+#IR_statusbox = CTkTextbox(master=IRMenu, fg_color="#000000" ,text_color="#ff2775",
+#border_color="#ff2775", border_width=7, width=550, height=150)
+
+#IR_statusbox.place(relx=(8/16),rely=0.825,anchor="center")
+IR_btn_RX.place(relx=(11/16),rely=0.45,anchor="center")
+IR_btn_TX.place(relx=(5/16),rely=0.45,anchor="center")
 EXIT_IR_btn.place(relx=(15/16),rely=0.125,anchor="center")
 
 
@@ -111,14 +139,7 @@ def goodbye():
     UI.destroy()
     sys.exit()
 
-def infrared():
-    print("IR")
-def nfc():
-    print("NFC")
-def rfid():
-    print("RFID")
-def sdr():
-    print("SDR")
+
 
 #END btn funcs
 # START Define main menu btns
