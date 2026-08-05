@@ -84,7 +84,7 @@ border_color="#008cff", border_width=7,command=lambda: show_frame(mainMenu))
 IR_btn_TX = CTkButton(master=IRMenu,  text="TX",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ff2775",
 font=(font,25), width=200, height=200,
-border_color="#ff2775", border_width=7,command=transmit))
+border_color="#ff2775", border_width=7,command=transmit)
 
 IR_btn_RX = CTkButton(master=IRMenu,  text="RX",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ff2775",
