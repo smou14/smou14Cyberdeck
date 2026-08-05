@@ -4,8 +4,8 @@ import subprocess
 set_appearance_mode("dark")
 UI = CTk()
 UI.geometry("800x480")
-UI.attributes("-fullscreen", True)   # fullscreen
-UI.overrideredirect(True)
+#UI.attributes("-fullscreen", True)   # fullscreen
+#UI.overrideredirect(True)
 current_frame = None
 font="DejaVu Sans Mono"
 # START btn funcs
@@ -52,7 +52,7 @@ def transmit():
     )
 
     if result.returncode == 0:
-        print("Transmission successful!")
+        print(f"Transmission successful! {code}")
     else:
         print(result.stderr)
 def nfc():
