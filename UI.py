@@ -18,7 +18,7 @@ def infrared():
     print("IR")
 def send_ir(code):
     result = subprocess.run(
-    [
+        [
             "sudo",
             "ir-ctl",
             "-d",
@@ -29,6 +29,15 @@ def send_ir(code):
         capture_output=True,
         text=True
     )
+
+    return result.returncode == 0, result.stdout, result.stderr
+def transmit():
+    ok, out, err = send_ir("necx:0x00FFA25D")
+
+    if ok:
+        print("Transmission successful")
+    else:
+        print(err)
 def nfc():
     print("NFC")
 def rfid():
@@ -75,7 +84,7 @@ border_color="#008cff", border_width=7,command=lambda: show_frame(mainMenu))
 IR_btn_TX = CTkButton(master=IRMenu,  text="TX",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ff2775",
 font=(font,25), width=200, height=200,
-border_color="#ff2775", border_width=7,command=send_ir("necx:0x00FFA25D"))
+border_color="#ff2775", border_width=7,command=transmit))
 
 IR_btn_RX = CTkButton(master=IRMenu,  text="RX",fg_color="#000000",bg_color="#000000",
 hover_color="#000000",text_color="#ff2775",
