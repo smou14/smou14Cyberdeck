@@ -32,12 +32,29 @@ def send_ir(code):
 
     return result.returncode == 0, result.stdout, result.stderr
 def transmit():
-    ok, out, err = send_ir("necx:0x00FFA25D")
+    code = IR_code.get("0.0", "end").strip()
 
-    if ok:
-        print("Transmission successful")
+    if code == "":
+        print("No code entered.")
+        return
+
+    result = subprocess.run(
+        [
+            "sudo",
+            "ir-ctl",
+            "-d",
+            "/dev/lirc0",
+            "-S",
+            code
+        ],
+        capture_output=True,
+        text=True
+    )
+
+    if result.returncode == 0:
+        print("Transmission successful!")
     else:
-        print(err)
+        print(result.stderr)
 def nfc():
     print("NFC")
 def rfid():
@@ -92,10 +109,10 @@ font=(font,25), width=200, height=200,
 border_color="#ff2775", border_width=7,command=infrared)
 
 
-#IR_statusbox = CTkTextbox(master=IRMenu, fg_color="#000000" ,text_color="#ff2775",
-#border_color="#ff2775", border_width=7, width=550, height=150)
+IR_code = CTkTextbox(master=IRMenu, fg_color="#000000" ,text_color="#ff2775",
+border_color="#ff2775", border_width=7, width=225, height=50)
 
-#IR_statusbox.place(relx=(8/16),rely=0.825,anchor="center")
+IR_code.place(relx=(5/16),rely=0.75,anchor="center")
 IR_btn_RX.place(relx=(11/16),rely=0.45,anchor="center")
 IR_btn_TX.place(relx=(5/16),rely=0.45,anchor="center")
 EXIT_IR_btn.place(relx=(15/16),rely=0.125,anchor="center")
