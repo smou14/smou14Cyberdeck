@@ -203,8 +203,8 @@ border_color="#008cff", border_width=7,command=lambda: show_frame(mainMenu))
 EXIT_WIFI_btn.place(relx=(15/16),rely=0.125,anchor="center")
 
 WIFI_box = CTkTextbox(master=WIFIMenu, fg_color="#000000" ,text_color="#33ddff",
-border_color="#33ddff", border_width=7, width=800, height=300)
-WIFI_box.place(relx=(8/16),rely=0.6,anchor="center")
+border_color="#33ddff", border_width=7, width=600, height=300)
+WIFI_box.place(relx=(4/16),rely=0.6,anchor="center")
 WIFI_box.insert("0.0", getWifiData())
 
 
