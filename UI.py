@@ -205,7 +205,7 @@ EXIT_WIFI_btn.place(relx=(15/16),rely=0.125,anchor="center")
 WIFI_box = CTkTextbox(master=WIFIMenu, fg_color="#000000" ,text_color="#33ddff",
 border_color="#33ddff", border_width=7, width=600, height=300)
 WIFI_box.place(relx=(6/16),rely=0.6,anchor="center")
-#WIFI_box.insert("0.0", getWifiData())
+WIFI_box.insert("0.0", getWifiData())
 
 
 # END WIFI FRAME
