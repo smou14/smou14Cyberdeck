@@ -67,6 +67,7 @@ def getWifiData():
     else:
         print(result.stderr)
 def showWifiData():
+    WIFI_box.delete("1.0", "end")
     WIFI_box.insert("0.0", getWifiData())
 def nfc():
     print("NFC")
