@@ -204,7 +204,7 @@ EXIT_WIFI_btn.place(relx=(15/16),rely=0.125,anchor="center")
 
 WIFI_box = CTkTextbox(master=WIFIMenu, fg_color="#000000" ,text_color="#33ddff",
 border_color="#33ddff", border_width=7, width=550, height=300)
-WIFI_box.place(relx=(8/16),rely=0.25,anchor="center")
+WIFI_box.place(relx=(8/16),rely=0.5,anchor="center")
 
 
 
