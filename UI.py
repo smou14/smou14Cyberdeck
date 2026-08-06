@@ -66,6 +66,8 @@ def getWifiData():
         return result.stdout
     else:
         print(result.stderr)
+def showWifiData():
+    WIFI_box.insert("0.0", getWifiData())
 def nfc():
     print("NFC")
 def rfid():
@@ -205,7 +207,14 @@ EXIT_WIFI_btn.place(relx=(15/16),rely=0.125,anchor="center")
 WIFI_box = CTkTextbox(master=WIFIMenu, fg_color="#000000" ,text_color="#33ddff",
 border_color="#33ddff", border_width=7, width=600, height=300)
 WIFI_box.place(relx=(6/16),rely=0.6,anchor="center")
-WIFI_box.insert("0.0", getWifiData())
+
+
+REFRESH_WIFI_btn = CTkButton(master=WIFIMenu,  text="Scan",fg_color="#000000",bg_color="#000000",
+hover_color="#000000",text_color="#33ddff",
+font=(font,25), width=100, height=50,
+border_color="#33ddff", border_width=7,command=lambda: showWifiData)
+
+REFRESH_WIFI_btn.place(relx=(12/16),rely=0.5,anchor="center")
 
 
 # END WIFI FRAME
