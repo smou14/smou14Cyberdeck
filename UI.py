@@ -43,7 +43,7 @@ def transmit():
             "sudo",
             "ir-ctl",
             "-d",
-            "/dev/lirc0",
+            "/dev/lirc1",
             "-S",
             code
         ],
